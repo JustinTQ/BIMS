@@ -2,7 +2,7 @@
  * Created by asus-pc on 2018/6/27.
  */
 // 获取所有页面 生成多页面的集合
-let fs = require("fs");
+const fs = require("fs");
 const getFileNameList = path => {
     let fileList = [];
     let dirList = fs.readdirSync(path);

@@ -21,6 +21,7 @@ config.HTMLDirs.forEach((page) => {
         chunks: [page, 'commons'],
     });
     HTMLPlugins.push(htmlPlugin);
+
     Entries[page] = path.resolve(__dirname, `../src/js/${page}.js`);
 });
 
@@ -109,13 +110,14 @@ module.exports = {
                     }
                 }]
             },
+            { test: /(pdfkit|linebreak|fontkit|unicode|brotli|png-js).*\.js$/, loader: "transform-loader/cacheable?brfs" }
             //{ parser: { amd: false } } // 禁用AMD
         ],
     },
     //target: 'node',
-    // node:{
-    //     fs:'empty'
-    // },
+    node:{
+        fs:'empty'
+    },
     plugins:[
         new webpack.ProvidePlugin({
             $: "jquery",

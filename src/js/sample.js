@@ -20,16 +20,20 @@ $(function(){
         //2.如果不在同一文件下，就有跨域问题，需要搭建环境来处理，而且json的指向路径必须是根据html的下的路径去指定的
         ajax: "testdata.json",
         columns:[
-            {"data":"PID"},
-            {"data":"PNAME"},
-            {"data":"ISMEDADVISE"},
-            {"data":"ISBIO"},
-            {"data":"DEPARTS"},
-            {"data":"STUDYDATE"}
+            {"data":"sId"},
+            {"data":"sName"},
+            {"data":"sType"},
+            {"data":"sSource"},
+            {"data":"pName"},
+            {"data":"dName"},
+            {"data":"stoke"},
+            {"data":"position"},
+            {"data":"time"},
+            {"data":"statue"}
         ],
         //responsive: true,
         //columnDefs: {className: 'dt-head-center'},
-        pageLength: 10,
+        pageLength: 12,
         lengthChange: false,
         deferRender: true,
         language:{

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans-en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
@@ -9,50 +9,80 @@
 </head>
 <body>
 <div class="wrapper">
-    <div id="accordion">
-        <div class="headTitle">BIMS</div>
-        <div class="myNav">
-            <div class="myNav-header">
-                <a class="myNav-link" data-toggle="collapse" href="#collapse1" >
-                    <img src="../icons/sample.png" alt="sample">
-                    <span>样本管理</span>
-                </a>
-            </div>
-            <div id="collapse1" class="collapse" data-parent="#accordion">
-                <ul>
-                    <li data-target="sample.html">标本查询</li>
-                    <li>导出png</li>
-                    <li>导出excel</li>
-                </ul>
-            </div>
-        </div>
-        <div class="myNav">
-            <div class="myNav-header">
-                <a class="myNav-link" data-toggle="collapse" href="#collapse2" >容器管理</a>
-            </div>
-            <div id="collapse2" class="collapse" data-parent="#accordion">
-                <ul>
-                    <li>添加容器</li>
-                    <li>添加冰箱</li>
-                    <li>添加版盒</li>
-                </ul>
-            </div>
-        </div>
-        <div class="myNav">
-            <div class="myNav-header">
-                <a class="myNav-link" data-toggle="collapse" href="#collapse3" >统计分析</a>
-            </div>
-            <div id="collapse3" class="collapse" data-parent="#accordion">
-                <ul>
-                    <li>容器统计</li>
-                    <li>耗材统计</li>
-                </ul>
-            </div>
+    <div class="navPanel">
+        <h1 class="headTitle">BIMS</h1>
+        <div class="navMain">
+            <ul id="myPanel">
+                <li class="navItem">
+                    <a>
+                        <img class="itemImg" src="../icons/sample.png" alt="sample">
+                        <span>样本管理</span>
+                        <img class="itemTag" src="../icons/right.png" alt="">
+                    </a>
+                    <ul>
+                        <li data-target="sample.html">样本列表</li>
+                        <li data-target="sampleModel.html">样本模板</li>
+                        <li data-target="testManage.html">检验管理</li>
+                    </ul>
+                </li>
+                <li class="navItem">
+                    <a href="javascript:;">
+                        <img class="itemImg" src="../icons/container.png" alt="">
+                        <span>容器管理</span>
+                        <img class="itemTag" src="../icons/right.png" alt="">
+                    </a>
+                    <ul>
+                        <li data-target="freezerBoxManage.html">冷冻盒管理</li>
+                        <li data-target="fridgeManage.html">冰箱管理</li>
+                        <li data-target="roomManage.html">房间管理</li>
+                    </ul>
+                </li>
+                <li class="navItem">
+                    <a href="javascript:;">
+                        <img class="itemImg" src="../icons/project.png" alt="">
+                        <span>项目管理</span>
+                        <img class="itemTag" src="../icons/right.png" alt="">
+                    </a>
+                        <ul>
+                            <li data-target="projectList.html">项目列表</li>
+                            <li data-target="projectType.html">项目类型</li>
+                        </ul>
+                </li>
+                <li class="navItem">
+                    <a href="javascript:;">
+                        <img class="itemImg" src="../icons/statistic.png" alt="">
+                        <span>统计分析</span>
+                        <img class="itemTag" src="../icons/right.png" alt="">
+                    </a>
+                    <ul>
+                        <li data-target="containerStatistics.html">容器统计</li>
+                        <li data-target="consumerStatistics.html">耗材统计</li>
+                    </ul>
+                </li>
+                <li class="navItem">
+                    <a href="javascript:;">
+                        <img class="itemImg" src="../icons/power.png" alt="">
+                        <span>权限管理</span>
+                        <img class="itemTag" src="../icons/right.png" alt="">
+                    </a>
+                    <ul>
+                        <li data-target="userManage.html">用户管理</li>
+                        <li data-target="formManage.html">表单权限维护</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="contentPanel">
         <div class="topContent">
-
+            <div class="topRight">
+                <!--<span class="time"></span>-->
+                <img class="news" src="../icons/news.png" alt="">
+                <div class="user">
+                    <img class="userPhoto" src="../icons/userPhoto.png" alt="">
+                    <span class="userName">管理员</span>
+                </div>
+            </div>
         </div>
         <div class="mainContent">
         </div>

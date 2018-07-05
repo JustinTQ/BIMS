@@ -6,8 +6,12 @@
 a,a:hover, a:visited, a:link, a:active{
     text-decoration: none;
 }
+li{
+    list-style: none;
+}
 html,body {
-    font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+    /*font-family: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;*/
+    font-family: Arial,STXihei,Microsoft YaHei;
     height: 100%;
     overflow: hidden;
 }
@@ -17,7 +21,7 @@ html,body {
     display: flex;
     flex-direction: row;
 }
-#accordion{
+.navPanel{
     width: 270px;
     height: 100%;
     background-color: #343268;
@@ -31,35 +35,44 @@ html,body {
     background-color: #5555fb;
     color: #fff;
 }
-.myNav{
-    color: #e8e8e8;
-    background-color: #25244A;
-    text-align: center;
-}
-.myNav-header{
-    height: 50px;
-    line-height: 50px;
+.navMain{
     background-color: #343268;
 }
-a.myNav-link{
+#myPanel a{
     display: block;
+    font-size: 20px;
+    color: #ddd;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+}
+#myPanel .navShow{
+    transform:rotate(90deg);
+}
+#myPanel a .itemImg{
+    margin-right: 10px;
+}
+#myPanel a .itemTag{
+    float: right;
+    margin-top: 18px;
+    transition: transform 0.3s;
+    -webkit-transition: transform 0.3s; /* Safari */
+}
+#myPanel ul{
+    display: none;
+    color: #e8e8e8;
+    background-color: #25244A;
+}
+#myPanel ul li{
     height: 50px;
     line-height: 50px;
     font-size: 18px;
     color: #e8e8e8;
-    padding: 0 30px;
+    padding-left: 58px;
 }
-a.myNav-link:hover,.collapse li:hover{
+#myPanel a:hover,#myPanel ul li:hover{
     color: #fff;
     background-color: #444288;
-}
-.collapse{
-
-}
-.collapse ul li{
-    height: 50px;
-    line-height: 50px;
-    font-size: 16px;
 }
 .contentPanel{
     flex: 1;
@@ -68,6 +81,26 @@ a.myNav-link:hover,.collapse li:hover{
 }
 .topContent{
     height: 60px;
+    line-height: 60px;
+}
+.topContent .topRight{
+    float: right;
+    margin-right: 50px;
+}
+.topContent .news{
+    margin-right: 50px;
+}
+.topContent .user{
+    display: inline-block;
+}
+.topContent .userPhoto{
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    background-color: #fff;
+}
+.topContent .userName{
+    font-size: 18px;
 }
 .mainContent{
     flex: 1;
